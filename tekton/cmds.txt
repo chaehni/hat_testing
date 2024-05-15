@@ -1,0 +1,1 @@
+kubectl run curl-pod --image=curlimages/curl --restart=Never -it --rm -- curl -X POST -H "Content-Type: application/json" -d '{"username": "Nicolas"}' http://10.244.0.110:8080

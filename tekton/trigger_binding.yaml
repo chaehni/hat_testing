@@ -1,0 +1,8 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerBinding
+metadata:
+  name: test-binding
+spec:
+  params:
+    - name: username
+      value: $(body.username)

@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: goodbye-task
+spec:
+  params:
+  - name: platform
+    type: string
+  - name: browser
+    type: string
+  steps:
+    - name: say-goodbye
+      image: alpine
+      script: |
+        #!/bin/sh
+        echo "$(params.platform) and $(params.browser)"

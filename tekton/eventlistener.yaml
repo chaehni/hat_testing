@@ -1,0 +1,13 @@
+
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: event-listener
+spec:
+  serviceAccountName: tekton-trigger-sa
+  triggers:
+    - name: test-trigger
+      bindings:
+        - ref: test-binding
+      template:
+        ref: test-template

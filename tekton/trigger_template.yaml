@@ -1,0 +1,19 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerTemplate
+metadata:
+  name: test-template
+spec:
+  params:
+    - name: username
+      description: A username
+  resourcetemplates:
+    - apiVersion: tekton.dev/v1beta1
+      kind: PipelineRun
+      metadata:
+        generateName: matrix-run
+      spec:
+        pipelineRef:
+          name: hello-goodbye
+        params:
+        - name: username
+          value: $(tt.params.username)
