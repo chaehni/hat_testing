@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: customer-apps
+spec:
+  generators:
+  - list:
+      elements:
+      - customer: swica
+        path: swica
+  template:
+    metadata:
+      name: '{{customer}}-deployments'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/chaehni/hat_testing.git
+        targetRevision: master
+        path: 'argocd/apps/{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: argocd

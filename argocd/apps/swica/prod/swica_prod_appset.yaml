@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: swica-stages
+spec:
+  generators:
+  - list:
+      elements:
+      - product: user-service
+        path: user-service
+  template:
+    metadata:
+      name: '{{customer}}-{{stage}}-{{product}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/chaehni/hat_testing.git
+        targetRevision: master
+        path: 'argocd/apps/swica/prod/{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: argocd
