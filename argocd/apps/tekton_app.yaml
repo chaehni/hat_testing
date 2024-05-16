@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tekton-pipeline
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/chaehni/hat_testing.git
+    targetRevision: master
+    path: tekton
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tekton-tests
+  syncPolicy:
+    automated:
+      selfHeal: true

@@ -1,0 +1,11 @@
+project: default
+source:
+  repoURL: 'https://github.com/chaehni/hat_testing'
+  path: helm
+  targetRevision: master
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: hat-testing
+syncPolicy:
+  automated:
+    selfHeal: true
