@@ -10,7 +10,7 @@ spec:
       - customer: swica
   template:
     metadata:
-      name: '{{customer}}-deployments'
+      name: '{{customer}}-deployments-app'
     spec:
       project: default
       source:

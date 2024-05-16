@@ -10,7 +10,7 @@ spec:
       - stage: prod
   template:
     metadata:
-      name: 'swica-{{stage}}'
+      name: 'swica-{{stage}}-app'
     spec:
       project: default
       source:

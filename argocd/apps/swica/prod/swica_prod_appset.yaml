@@ -10,7 +10,7 @@ spec:
       - product: user-service
   template:
     metadata:
-      name: 'swica-prod-{{product}}'
+      name: 'swica-prod-{{product}}-app'
     spec:
       project: default
       source:
