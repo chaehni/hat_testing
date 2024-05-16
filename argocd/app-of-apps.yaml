@@ -1,16 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Application
+kind: ApplicationSet
 metadata:
   name: root
   namespace: argocd
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/chaehni/hat_testing.git
-    targetRevision: master
-    path: argocd/apps
-  destination:
-    server: https://kubernetes.default.svc
-  syncPolicy:
-    automated:
-      selfHeal: true
+  generators:
+  - list:
+      elements:
+      - folder: apps
+      - folder: projects
+  template:
+    metadata:
+      name: '{{folder}}-app'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/chaehni/hat_testing.git
+        targetRevision: master
+        path: argocd/{{folder}}
+      destination:
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated:
+          selfHeal: true
