@@ -11,7 +11,7 @@ spec:
     targetRevision: master
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: swica-prod-project
+    namespace: swica-prod
   syncPolicy:
     automated:
       selfHeal: true
