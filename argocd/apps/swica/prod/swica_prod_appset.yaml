@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: swica-stages
+  namespace: argocd
 spec:
   generators:
   - list:
@@ -19,4 +20,3 @@ spec:
         path: 'argocd/apps/swica/prod/{{path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: argocd
