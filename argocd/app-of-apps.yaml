@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/chaehni/hat_testing.git
     targetRevision: master
-    path: apps
+    path: argocd/apps
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:

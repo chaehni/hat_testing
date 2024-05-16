@@ -1,11 +1,17 @@
-project: default
-source:
-  repoURL: 'https://github.com/chaehni/hat_testing'
-  path: helm
-  targetRevision: master
-destination:
-  server: 'https://kubernetes.default.svc'
-  namespace: hat-testing
-syncPolicy:
-  automated:
-    selfHeal: true
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tekton-pipeline
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/chaehni/hat_testing'
+    path: helm
+    targetRevision: master
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: hat-testing
+  syncPolicy:
+    automated:
+      selfHeal: true
