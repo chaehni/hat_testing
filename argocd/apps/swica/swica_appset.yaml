@@ -12,7 +12,7 @@ spec:
     metadata:
       name: 'swica-{{stage}}-app'
     spec:
-      project: swica-prod-project
+      project: default
       source:
         repoURL: https://github.com/chaehni/hat_testing.git
         targetRevision: master
