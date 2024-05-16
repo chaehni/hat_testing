@@ -19,6 +19,6 @@ spec:
           - "Content-Type: application/json"
           - "-d"
           - '{"username": "ArgoCD"}'
-          - "http://10.244.0.110:8080"
+          - "el-event-listener.tekton-tests:8080"
       restartPolicy: Never
   backoffLimit: 2
