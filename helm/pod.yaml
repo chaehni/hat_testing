@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: static-web
+  name: static-web-app
   labels:
     role: myrole
 spec:
@@ -10,5 +10,5 @@ spec:
       image: nginx
       ports:
         - name: web
-          containerPort: 8080
+          containerPort: 80
           protocol: TCP
