@@ -8,7 +8,6 @@ spec:
   - list:
       elements:
       - stage: prod
-        path: prod
   template:
     metadata:
       name: 'swica-{{stage}}'
@@ -17,7 +16,7 @@ spec:
       source:
         repoURL: https://github.com/chaehni/hat_testing.git
         targetRevision: master
-        path: 'argocd/apps/swica/{{path}}'
+        path: 'argocd/apps/swica/{{stage}}'
       destination:
         server: https://kubernetes.default.svc
       syncPolicy:

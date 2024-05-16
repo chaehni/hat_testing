@@ -8,7 +8,6 @@ spec:
   - list:
       elements:
       - customer: swica
-        path: swica
   template:
     metadata:
       name: '{{customer}}-deployments'
@@ -17,7 +16,7 @@ spec:
       source:
         repoURL: https://github.com/chaehni/hat_testing.git
         targetRevision: master
-        path: 'argocd/apps/{{path}}'
+        path: 'argocd/apps/{{customer}}'
       destination:
         server: https://kubernetes.default.svc
       syncPolicy:
