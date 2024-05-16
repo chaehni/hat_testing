@@ -11,7 +11,7 @@ spec:
         path: prod
   template:
     metadata:
-      name: '{{customer}}-{{stage}}'
+      name: 'swica-{{stage}}'
     spec:
       project: default
       source:

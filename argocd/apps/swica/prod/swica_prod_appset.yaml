@@ -11,7 +11,7 @@ spec:
         path: user-service
   template:
     metadata:
-      name: '{{customer}}-{{stage}}-{{product}}'
+      name: 'swica-prod-{{product}}'
     spec:
       project: default
       source:
