@@ -11,4 +11,4 @@ spec:
       image: alpine
       script: |
         #!/bin/sh
-        echo "Hello $(params.username)"
+        echo "Hello from $(params.username)"
