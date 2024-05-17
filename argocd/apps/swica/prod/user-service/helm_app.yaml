@@ -7,7 +7,7 @@ spec:
   project: swica-prod-project
   source:
     repoURL: 'https://github.com/chaehni/hat_testing'
-    path: helm
+    path: helm/user-service
     targetRevision: master
   destination:
     server: 'https://kubernetes.default.svc'
