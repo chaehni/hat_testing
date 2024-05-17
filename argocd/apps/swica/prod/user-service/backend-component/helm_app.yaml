@@ -9,6 +9,12 @@ spec:
     - repoURL: 'https://github.com/chaehni/hat_testing'
       path: helm/user-service
       targetRevision: master
+      helm:
+        valueFiles:
+        - $values/values/swica_values.yaml
+    - repoURL: 'https://github.com/chaehni/hat_testing'
+      targetRevision: master
+      ref: values
     - repoURL: 'https://github.com/chaehni/hat_testing'
       path: argocd/apps/swica/prod/user-service/backend-component/hook
       targetRevision: master
