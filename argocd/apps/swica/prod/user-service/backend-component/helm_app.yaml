@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: swica-prod-user-service
+  name: swica-prod-user-service-backend-component
   namespace: argocd
 spec:
   project: swica-prod-project
