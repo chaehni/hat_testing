@@ -7,7 +7,7 @@ spec:
   generators:
   - list:
       elements:
-      - component: backend
+      - component: backend-component
   template:
     metadata:
       name: 'swica-prod-user-service-{{component}}-app'
