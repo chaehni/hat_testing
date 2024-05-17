@@ -10,7 +10,7 @@ spec:
       path: helm/user-service
       targetRevision: master
     - repoURL: 'https://github.com/chaehni/hat_testing'
-      path: argocd/apps/swica/prod/user-service/backend-component/hook/post_hook.yaml
+      path: argocd/apps/swica/prod/user-service/backend-component/hook
       targetRevision: master
   destination:
     server: 'https://kubernetes.default.svc'
