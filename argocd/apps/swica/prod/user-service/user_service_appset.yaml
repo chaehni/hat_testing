@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: swica-prod-apps
+  name: swica-prod-user-service-apps
   namespace: argocd
 spec:
   generators:
@@ -10,7 +10,7 @@ spec:
       - component: backend
   template:
     metadata:
-      name: 'swica-prod-user-service-backend-app'
+      name: 'swica-prod-user-service-{{component}}-app'
     spec:
       project: default
       source:
