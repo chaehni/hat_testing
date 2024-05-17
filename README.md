@@ -39,6 +39,6 @@
 │   ├── rbac.yaml
 │   ├── trigger_binding.yaml
 │   └── trigger_template.yaml
-└── values
-    └── swica_values.yaml
+└── values # Contains Helm values to be shared across Helm deployments
+    └── swica_values.yaml # Values to be shared across all Swica deployments, e.g. customer identifier
 ```
