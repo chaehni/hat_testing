@@ -1,0 +1,279 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Generated schema for Root",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "replicaCount": {
+        "type": "number"
+      },
+      "image": {
+        "type": "object",
+        "properties": {
+          "repository": {
+            "type": "string"
+          },
+          "pullPolicy": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "repository",
+          "pullPolicy",
+          "tag"
+        ]
+      },
+      "imagePullSecrets": {
+        "type": "array",
+        "items": {}
+      },
+      "nameOverride": {
+        "type": "string"
+      },
+      "fullnameOverride": {
+        "type": "string"
+      },
+      "serviceAccount": {
+        "type": "object",
+        "properties": {
+          "create": {
+            "type": "boolean"
+          },
+          "automount": {
+            "type": "boolean"
+          },
+          "annotations": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "create",
+          "automount",
+          "annotations",
+          "name"
+        ]
+      },
+      "podAnnotations": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "podLabels": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "podSecurityContext": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "securityContext": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "service": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "port": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "type",
+          "port"
+        ]
+      },
+      "ingress": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          },
+          "className": {
+            "type": "string"
+          },
+          "annotations": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "hosts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "host": {
+                  "type": "string"
+                },
+                "paths": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "path": {
+                        "type": "string"
+                      },
+                      "pathType": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "path",
+                      "pathType"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "host",
+                "paths"
+              ]
+            }
+          },
+          "tls": {
+            "type": "array",
+            "items": {}
+          }
+        },
+        "required": [
+          "enabled",
+          "className",
+          "annotations",
+          "hosts",
+          "tls"
+        ]
+      },
+      "resources": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "livenessProbe": {
+        "type": "object",
+        "properties": {
+          "httpGet": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "port": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "path",
+              "port"
+            ]
+          }
+        },
+        "required": [
+          "httpGet"
+        ]
+      },
+      "readinessProbe": {
+        "type": "object",
+        "properties": {
+          "httpGet": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "port": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "path",
+              "port"
+            ]
+          }
+        },
+        "required": [
+          "httpGet"
+        ]
+      },
+      "autoscaling": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          },
+          "minReplicas": {
+            "type": "number"
+          },
+          "maxReplicas": {
+            "type": "number"
+          },
+          "targetCPUUtilizationPercentage": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "enabled",
+          "minReplicas",
+          "maxReplicas",
+          "targetCPUUtilizationPercentage"
+        ]
+      },
+      "volumes": {
+        "type": "array",
+        "items": {}
+      },
+      "volumeMounts": {
+        "type": "array",
+        "items": {}
+      },
+      "nodeSelector": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "tolerations": {
+        "type": "array",
+        "items": {}
+      },
+      "affinity": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "required": [
+      "replicaCount",
+      "image",
+      "imagePullSecrets",
+      "nameOverride",
+      "fullnameOverride",
+      "serviceAccount",
+      "podAnnotations",
+      "podLabels",
+      "podSecurityContext",
+      "securityContext",
+      "service",
+      "ingress",
+      "resources",
+      "livenessProbe",
+      "readinessProbe",
+      "autoscaling",
+      "volumes",
+      "volumeMounts",
+      "nodeSelector",
+      "tolerations",
+      "affinity"
+    ]
+  }
