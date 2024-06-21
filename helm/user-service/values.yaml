@@ -5,7 +5,7 @@
 replicaCount: 2
 randomValue: 4
 image:
-  repository: nginx
+  repository: nginxx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""

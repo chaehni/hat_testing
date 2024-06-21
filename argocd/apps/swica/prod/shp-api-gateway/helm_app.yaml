@@ -8,7 +8,7 @@ spec:
   sources:
     - repoURL: 'https://github.com/chaehni/hat_testing'
       path: helm/user-service
-      targetRevision: masters
+      targetRevision: master
       helm:
         valueFiles:
         - $values/values/swica_values.yaml
