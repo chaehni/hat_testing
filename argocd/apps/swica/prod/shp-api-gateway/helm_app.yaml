@@ -15,9 +15,6 @@ spec:
     - repoURL: 'https://github.com/chaehni/hat_testing'
       targetRevision: master
       ref: values
-    - repoURL: 'https://github.com/chaehni/hat_testing'
-      path: argocd/apps/swica/prod/user-service/backend-component/hook
-      targetRevision: master
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: swica-prod
