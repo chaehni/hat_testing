@@ -14,7 +14,7 @@ spec:
       helm:
         parameters:
         - name: image.tag
-          value: latest
+          value: garbage
         valueFiles:
         - $values/values/swica_values.yaml
     - repoURL: 'https://github.com/chaehni/hat_testing'
