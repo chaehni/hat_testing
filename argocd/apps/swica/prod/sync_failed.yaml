@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: tekton-trigger-hook-
+  namespace: swica-prod # where to run hook? if outside of customer ns then we need to include that ns in the argocd project for that customer
+  annotations:
+    argocd.argoproj.io/hook: SyncFail
+spec:
+  template:
+    spec:
+      containers:
+      - name: curl
+        image: curlimages/curl
+        command:
+          - "curl"
+          - "-X"
+          - "POST"
+          - "-H"
+          - "Content-Type: application/json"
+          - "-d"
+          - '{"username": "ArgoCD"}'
+          - "el-event-listener.tekton-tests:8080"
+      restartPolicy: Never
+  backoffLimit: 2
