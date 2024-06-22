@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: swica-prod-user-service-backend-component
   namespace: argocd
+  annotations:
+    key: value 
 spec:
   project: swica-prod-project
   sources:
@@ -10,6 +12,9 @@ spec:
       path: helm/user-service
       targetRevision: master
       helm:
+        parameters:
+        - name: image.tag
+          value: garbage
         valueFiles:
         - $values/values/swica_values.yaml
     - repoURL: 'https://github.com/chaehni/hat_testing'
@@ -25,3 +30,6 @@ spec:
     automated:
       selfHeal: true
       prune: true
+  info:
+  - name: key
+    value: value
