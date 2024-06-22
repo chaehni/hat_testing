@@ -15,6 +15,9 @@ spec:
     - repoURL: 'https://github.com/chaehni/hat_testing'
       targetRevision: master
       ref: values
+    - repoURL: https://github.com/chaehni/hat_testing.git
+      targetRevision: master
+      path: 'argocd/apps/swica/prods'
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: swica-prod
