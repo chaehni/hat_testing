@@ -4,7 +4,7 @@ metadata:
   name: swica-prod-user-service-backend-component
   namespace: argocd
   annotations:
-    key: value 
+    key: values 
 spec:
   project: swica-prod-project
   sources:
