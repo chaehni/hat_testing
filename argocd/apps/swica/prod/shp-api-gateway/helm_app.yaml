@@ -4,7 +4,7 @@ metadata:
   name: swica-prod-user-service-backend-component
   namespace: argocd
   annotations:
-    key: values 
+    argocd.argoproj.io/enable-health-check: "true"
 spec:
   project: swica-prod-project
   sources:
