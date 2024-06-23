@@ -7,7 +7,7 @@ spec:
   generators:
   - list:
       elements:
-      - customer: swica
+      - customer: client
   template:
     metadata:
       name: '{{customer}}-deployments-app'

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: client-prod-user-service-backend
+  name: client-prod-user-data-processor
   namespace: argocd
   annotations:
     argocd.argoproj.io/enable-health-check: "true"

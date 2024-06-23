@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: swica-stages
+  name: client-stages
   namespace: argocd
 spec:
   generators:
@@ -10,16 +10,16 @@ spec:
       - stage: prod
   template:
     metadata:
-      name: 'swica-{{stage}}-app'
+      name: 'client-{{stage}}-app'
     spec:
       project: default
       source:
         repoURL: https://github.com/chaehni/hat_testing.git
         targetRevision: master
-        path: 'argocd/apps/swica/{{stage}}'
+        path: 'argocd/apps/client/{{stage}}'
         directory:
           recurse: true
-          include: '{shp-api-gateway/*.yaml,post_hook.yaml,sync_failed.yaml }'
+          include: '{shp-api-gateway/*.yaml,shp-data-platform/*.yaml,post_hook.yaml,sync_failed.yaml}'
       destination:
         server: https://kubernetes.default.svc
       syncPolicy:

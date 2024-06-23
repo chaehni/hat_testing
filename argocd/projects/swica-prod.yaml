@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: swica-prod-project
+  name: client-prod-project
   namespace: argocd
   # Finalizer that ensures that project is not deleted until it is not referenced by any application
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   # Project description
-  description: swica prod project
+  description: client prod project
 
   # Allow manifests to deploy from any Git repos
   sourceRepos:
@@ -17,5 +17,5 @@ spec:
   # Only permit applications to deploy to the guestbook namespace in the same cluster
   # Destination clusters can be identified by 'server', 'name', or both.
   destinations:
-  - namespace: swica-prod
+  - namespace: client-prod
     server: https://kubernetes.default.svc
