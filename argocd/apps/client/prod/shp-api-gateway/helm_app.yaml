@@ -22,7 +22,7 @@ spec:
       ref: values
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: client-prod
+    namespace: service-backend
   syncPolicy:
     automated:
       selfHeal: true
