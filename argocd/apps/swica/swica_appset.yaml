@@ -19,7 +19,7 @@ spec:
         path: 'argocd/apps/swica/{{stage}}'
         directory:
           recurse: true
-          include: '{{{stage}}/shp-api-gateway/*,{{stage}}/post_hook.yaml,{{stage}}/sync_failed.yaml}'
+          include: '{ {{stage}}/shp-api-gateway/*,{{stage}}/post_hook.yaml,{{stage}}/sync_failed.yaml }'
       destination:
         server: https://kubernetes.default.svc
       syncPolicy:
