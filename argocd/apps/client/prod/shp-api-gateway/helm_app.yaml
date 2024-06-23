@@ -20,9 +20,6 @@ spec:
     - repoURL: 'https://github.com/chaehni/hat_testing'
       targetRevision: master
       ref: values
-    - repoURL: https://github.com/chaehni/hat_testing.git
-      targetRevision: master
-      path: 'argocd/apps/client/prod'
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: client-prod
