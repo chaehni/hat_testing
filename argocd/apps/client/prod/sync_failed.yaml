@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: tekton-trigger-hook-
-  namespace: data-processors # where to run hook? if outside of customer ns then we need to include that ns in the argocd project for that customer
+  namespace: data-processor # where to run hook? if outside of customer ns then we need to include that ns in the argocd project for that customer
   annotations:
     argocd.argoproj.io/hook: SyncFail
 spec:
